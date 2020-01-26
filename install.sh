@@ -13,7 +13,7 @@ gvm_install_dir() {
 }
 
 gvm_latest_version() {
-    gvm_echo "install-current"
+    gvm_echo "install-latest"
 }
 
 gvm_source() {
