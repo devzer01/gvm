@@ -13,16 +13,16 @@ gvm_install_dir() {
 }
 
 gvm_latest_version() {
-    gvm_echo "v0.1.2"
+    gvm_echo "install-current"
 }
 
 gvm_source() {
     local gvm_method="$1"
     local gvm_source_url
     if [ "_$gvm_method" = "_script" ]; then
-        gvm_source_url="https://raw.githubusercontent.com/staticmukesh/gvm/$(gvm_latest_version)/gvm.sh"
+        gvm_source_url="https://raw.githubusercontent.com/devzer01/gvm/$(gvm_latest_version)/gvm.sh"
     elif [ "_$gvm_method" = "_git" ] || [ -z "$gvm_method" ]; then
-        gvm_source_url="https://github.com/staticmukesh/gvm.git"
+        gvm_source_url="https://github.com/devzer01/gvm.git"
     else
         echo >&2 "Unexpected value \"$gvm_method\" for \$gvm_method"
         return 1
